@@ -8,7 +8,7 @@ import sys
 import select
 
 def tag_line(prefix: str, line: str) -> str:
-    """prefix와 line을 결합해서 반환"""
+    """Return the concatenation of prefix and line."""
     return f"{prefix}: {line}"
 
 def main():
@@ -61,7 +61,7 @@ def main():
         if proc.poll() is not None and not readable:
             break
 
-    # 남은 출력 처리
+    # Handle remaining output
     while True:
         line = proc.stdout.readline()
         if not line:
