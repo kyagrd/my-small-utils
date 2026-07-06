@@ -8,7 +8,7 @@ import sys
 import select
 
 def tag_line(prefix: str, line: str) -> str:
-    """Return the concatenation of prefix and line."""
+    """Format and return a line prefixed with '<prefix>: '."""
     return f"{prefix}: {line}"
 
 def main():
